@@ -1,0 +1,17 @@
+<header>
+  <ul>
+    <li><a [routerLink]="['/about']" [routerLinkActive]="['activated']">About</a></li>
+    <li><a [routerLink]="['/projects']" [routerLinkActive]="['activated']">Projects</a></li>
+    <li id="logo"><a href="#">NS</a></li>
+    <li><a [routerLink]="['/create']" [routerLinkActive]="['activated']">Create</a></li>
+    <li><a [routerLink]="['/contact']" [routerLinkActive]="['activated']">Contact</a></li>
+  </ul>
+</header>
+
+<section id="content">
+  <router-outlet></router-outlet>
+</section>
+
+<footer>
+  Nicolás Sogliano - 2021 - All rights reserved &copy;
+</footer>

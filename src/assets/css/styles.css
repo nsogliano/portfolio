@@ -1,0 +1,343 @@
+*{
+    font-family: "jura";    
+}
+
+/* Import custom fonts */
+@font-face {
+    font-family: "jura";
+    src: url('../css/fonts/jura.ttf');
+}
+
+@font-face {
+    font-family: "rock";
+    src: url('../css/fonts/rock.ttf');
+}
+
+/* General styling */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: "jura";
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    background-size: cover;
+    background-position: cover;
+}
+
+.clearfix {
+    float: none;
+    clear: both
+}
+
+/* Navigation bar */
+header {
+    display:block;
+    width: 100%;
+    height: 90px;
+    background: black;
+    position: fixed;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header ul {
+    display:block;
+    width: 35%;
+    height: inherit;
+    margin: 0px auto;
+    margin-top: -5px;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+    line-height: 90px;
+}
+
+header a {
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: inherit;
+    text-decoration: none;
+    color:white;
+    transition: all 400ms;
+}
+
+header a:hover,
+.activated{
+    background: rgba(74, 74, 74, 0.8);
+}
+
+/* Logo */
+#logo {
+    font-family: "rock";
+    font-size: 30px;
+}
+
+#logo a {
+    transition: color 500ms, transform 500ms;
+}
+
+#logo a:hover {
+    background: transparent;
+    transform: scale(1.25, 1.25)
+}
+
+/* Main content */
+#content {
+    min-height: 950px;
+    width: 75%;
+    margin: 0px auto;
+    /*
+    box-shadow: 0px 0px 40px rgba(20, 20, 20, 0.8);
+    background: rgba(10, 10, 10, 0.7);
+    */
+    padding-top: 90px;
+}
+
+/* Footer */
+footer {
+    display:block;
+    text-align: center;
+    width: 75%;
+    margin: 0px auto;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    color: rgba(75, 75, 75, 0.7)
+}
+
+/* About */
+#title {
+    width: 70%;
+    margin: 0px auto;
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 65px;
+}
+
+#title h1 {
+    font-family: "jura";
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+#title h2 {
+    font-size: 30px;
+    color: rgba(170, 170, 170, 0.9);
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#title p {
+    font-size: 22px;
+    color: rgba(150, 150, 150, 0.9);
+}
+
+article.about {
+    color: rgba(255, 255, 255, 0.8);
+    width: 70%;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.about h2 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+}
+
+.about p {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    text-align: justify;
+}
+
+/* Form */
+.content {
+    padding-top: 20px;
+    margin: 0px auto;
+}
+
+.content .image{
+    text-align: center;
+}
+
+.content h2 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 40px;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+}
+
+form {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form textarea {
+    width: 25%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    font-weight: bold;
+    font-family: "jura";
+    font-size: 18px;
+    position:static;
+}
+
+form input[type="submit"],
+form button {
+    font-family: "jura";
+    font-size: 18px;
+    width: 10%;
+    padding: 5px;
+    margin-top: 10px;
+    background: rgba(74, 74, 74, 0.8);
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(55, 55, 55, 0.8);
+}
+
+form input{
+    font-family: "jura";
+}
+
+input #file-upload-button{
+    font-family: "jura";
+}
+
+.notValidError {
+    font-size: 18px;
+    color: red;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+
+.validMessage{
+    font-size: 18px;
+    color: #45ff45;
+    padding: 10px;
+    margin-top:15px;
+}
+
+.notValidMessage{
+    font-size: 18px;
+    color: red;
+    padding: 10px;
+    margin-top:15px;
+}
+
+form input[disabled] {
+    opacity: 0.1;
+}
+
+/* Pagina de proyectos */
+.projectUl {
+    text-align: center;
+}
+
+.project {
+    list-style: none;
+    display: inline-block;
+    width: 31%;
+    margin-bottom: 25px;
+    padding: 10px;
+}
+.project img{
+    width:100%;
+    border: 1px solid rgba(55, 55, 55, 0.8);
+    box-shadow: 0px 0px 40px rgba(20, 20, 20, 0.8);
+}
+
+    /* Mascara */
+.project .image{
+    width: 100%;
+    height: 250px;
+    overflow:hidden;
+}
+
+.detailTitle{
+    color:white;
+}
+
+#data{
+    text-align: center;
+}
+
+#data h1{
+    font-family: "jura";
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.detail .image{
+    width: 100%;
+    height: 500px;
+    overflow:hidden;
+}
+
+.btnEdit,
+.btnDelete{
+    text-align: center;
+    font-family: "jura";
+    font-size: 18px;
+    width: 100%;
+    padding: 5px;
+    margin-top: 25px;
+    background: rgba(74, 74, 74, 0.8);
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(55, 55, 55, 0.8);
+    margin-right: 10px;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+.imageContainer{
+    width: 200px;
+    height:120px;
+    text-align: center;
+    margin: 0px auto;
+    margin-top: 15px;
+    padding-bottom: 50px;
+    position: sticky;
+    overflow: hidden;
+}
+
+.imageContainer img{
+    width: 100%;
+    height: auto;
+}
+
+#sure {
+    display:block;
+    margin-top: 10px;
+    font-weight: bold;
+}

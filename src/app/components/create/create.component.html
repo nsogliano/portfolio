@@ -1,0 +1,56 @@
+<div class="content">
+    <h2>{{ title }}</h2>
+    <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+        <p>
+            <label for="name">Name</label>
+            <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name" required/>
+            <br *ngIf="name.touched && !name.valid"/>
+            <span class="notValidError" *ngIf="name.touched && !name.valid">Enter a valid name.</span>
+            <br *ngIf="name.touched && !name.valid"/>
+            <br *ngIf="name.touched && !name.valid"/>
+        </p>
+        <p>
+            <label for="description">Description</label>
+            <textarea name="description" #description="ngModel" [(ngModel)]="project.description" required></textarea>
+            <br *ngIf="description.touched && !description.valid"/>
+            <span class="notValidError" *ngIf="description.touched && !description.valid">Enter a valid description.</span>
+            <br *ngIf="description.touched && !description.valid"/>
+            <br *ngIf="description.touched && !description.valid"/>
+        </p>
+        <p>
+            <label for="category">Category</label>
+            <input type="text" name="category" #category="ngModel" [(ngModel)]="project.category" required/>
+            <br *ngIf="category.touched && !category.valid"/>
+            <span class="notValidError" *ngIf="category.touched && !category.valid">Enter a valid category.</span>
+            <br *ngIf="category.touched && !category.valid"/>
+            <br *ngIf="category.touched && !category.valid"/>
+        </p>
+        <p>
+            <label for="year">Year</label>
+            <input type="number" name="year" #year="ngModel" [(ngModel)]="project.year" required/>
+            <br *ngIf="year.touched && !year.valid"/>
+            <span class="notValidError" *ngIf="year.touched && !year.valid">Enter a valid year.</span>
+            <br *ngIf="year.touched && !year.valid"/>
+            <br *ngIf="year.touched && !year.valid"/>
+        </p>
+        <p>
+            <label for="langs">Languages</label>
+            <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs" required/>
+            <br *ngIf="langs.touched && !langs.valid"/>
+            <span class="notValidError" *ngIf="langs.touched && !langs.valid">Enter a valid lang.</span>
+            <br *ngIf="langs.touched && !langs.valid"/>
+            <br *ngIf="langs.touched && !langs.valid"/>
+        </p>
+        <p>
+            <label for="image">Image</label>
+            <input type="file" name="image" placeholder="Upload image" (change)="fileChangeEvent($event)"/>
+        </p>
+        <div class="imageContainer" *ngIf="project.image">
+            <img src="{{ apiUrl+'get-image/'+project.image }}" *ngIf="project.image"/>
+        </div>
+        <input type="submit" value="Send" [disabled]="!projectForm.form.valid"/>
+        <div class="validMessage" *ngIf="status == true">The project has been created. You can check it clicking <a [routerLink]="['/project',saveProject._id]">here.</a></div>
+        <div class="notValidMessage" *ngIf="status == false">The project could not be created</div>
+
+    </form>
+</div>
